@@ -7,7 +7,7 @@ using System.Media;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using TST;
+//using TST;
 
 namespace PICkit2V2
 {
@@ -3360,23 +3360,23 @@ namespace PICkit2V2
 					formTestMem.UpdateTestMemoryGrid();
 				}
 			}
-			if (testConnected)
-			{
-				updateTestGUI();
-			}
+			//if (testConnected)
+			//{
+			//	updateTestGUI();
+			//}
 		}
 
-		private void updateTestGUI()
-		{
-			try
-			{
-				MAN.UpdateTestGUI();
-			}
-			catch
-			{
-				MessageBox.Show("Error Connecting to\nPk2Test.dll 003", "PICkit 2 Error");
-			}
-		}
+		//private void updateTestGUI()
+		//{
+		//	try
+		//	{
+		//		MAN.UpdateTestGUI();
+		//	}
+		//	catch
+		//	{
+		//		MessageBox.Show("Error Connecting to\nPk2Test.dll 003", "PICkit 2 Error");
+		//	}
+		//}
 
 		private void progMemViewChanged(object sender, EventArgs e)
 		{
@@ -7317,19 +7317,19 @@ namespace PICkit2V2
 		{
 			try
 			{
-				string[] menus = MAN.GetMenus();
-				testToolStripMenuItem.Text = "Test " + menus[menus.Length - 1];
-				for (int i = 0; i < menus.Length - 1; i++)
-				{
-					testToolStripMenuItem.DropDown.Items.Add(menus[i]);
-				}
-				MAN.UpdateMainFormGUI = ExtCallUpdateGUI;
-				MAN.VerifyInMainForm = ExtCallVerify;
-				MAN.WriteInMainForm = ExtCallWrite;
-				MAN.ReadInMainForm = ExtCallRead;
-				MAN.EraseInMainForm = ExtCallErase;
-				MAN.BlankCheckInMainForm = ExtCallBlank;
-				testToolStripMenuItem.Visible = true;
+				//string[] menus = MAN.GetMenus();
+				//testToolStripMenuItem.Text = "Test " + menus[menus.Length - 1];
+				//for (int i = 0; i < menus.Length - 1; i++)
+				//{
+				//	testToolStripMenuItem.DropDown.Items.Add(menus[i]);
+				//}
+				//MAN.UpdateMainFormGUI = ExtCallUpdateGUI;
+				//MAN.VerifyInMainForm = ExtCallVerify;
+				//MAN.WriteInMainForm = ExtCallWrite;
+				//MAN.ReadInMainForm = ExtCallRead;
+				//MAN.EraseInMainForm = ExtCallErase;
+				//MAN.BlankCheckInMainForm = ExtCallBlank;
+				//testToolStripMenuItem.Visible = true;
 				return true;
 			}
 			catch
@@ -7341,15 +7341,15 @@ namespace PICkit2V2
 
 		private void testMenuDropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
-			int num = testToolStripMenuItem.DropDown.Items.IndexOf(e.ClickedItem);
-			try
-			{
-				MAN.CallTestForms(num);
-			}
-			catch
-			{
-				MessageBox.Show("Error Connecting to\nPk2Test.dll 002", "PICkit 2 Error");
-			}
+			//int num = testToolStripMenuItem.DropDown.Items.IndexOf(e.ClickedItem);
+			//try
+			//{
+			//	MAN.CallTestForms(num);
+			//}
+			//catch
+			//{
+			//	MessageBox.Show("Error Connecting to\nPk2Test.dll 002", "PICkit 2 Error");
+			//}
 		}
 
 		private void buttonShowIDMem_Click(object sender, EventArgs e)
