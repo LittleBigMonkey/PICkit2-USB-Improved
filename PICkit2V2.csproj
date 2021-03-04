@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{E78AC285-E1D1-4406-B970-65AA820B7046}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>PICkit2V2</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="PK2Test" />
+    <Reference Include="PICkit2V2">
+      <HintPath>C:\Program Files (x86)\Microchip\PICkit 2 v2\PICkit2V2.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PICkit2V2.Properties\Resources.cs" />
+    <Compile Include="PICkit2V2.Properties\Settings.cs" />
+    <Compile Include="PICkit2V2\Constants.cs" />
+    <Compile Include="PICkit2V2\DelegateBlankCheck.cs" />
+    <Compile Include="PICkit2V2\DelegateErase.cs" />
+    <Compile Include="PICkit2V2\DelegateMemEdited.cs" />
+    <Compile Include="PICkit2V2\DelegateMultiEEMemClosed.cs" />
+    <Compile Include="PICkit2V2\DelegateMultiProgMemClosed.cs" />
+    <Compile Include="PICkit2V2\DelegateOpenProgToGoGuide.cs" />
+    <Compile Include="PICkit2V2\DelegateRead.cs" />
+    <Compile Include="PICkit2V2\DelegateResetStatusBar.cs" />
+    <Compile Include="PICkit2V2\DelegateStatusWin.cs" />
+    <Compile Include="PICkit2V2\DelegateStepStatusBar.cs" />
+    <Compile Include="PICkit2V2\DelegateUpdateGUI.cs" />
+    <Compile Include="PICkit2V2\DelegateVddCallback.cs" />
+    <Compile Include="PICkit2V2\DelegateVerify.cs" />
+    <Compile Include="PICkit2V2\DelegateWrite.cs" />
+    <Compile Include="PICkit2V2\DelegateWriteCal.cs" />
+    <Compile Include="PICkit2V2\DeviceData.cs" />
+    <Compile Include="PICkit2V2\DeviceFile.cs" />
+    <Compile Include="PICkit2V2\DialogAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogCalibrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogConfigEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogCustomBaud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogDevFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogLogic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogPK2Go.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\dialogSounds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogTrigger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogTroubleshoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogUART.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogUnitSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogUserIDs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\DialogVDDErase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\dsPIC33_PE.cs" />
+    <Compile Include="PICkit2V2\FormMultiWinEEData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\FormMultiWinProgMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\FormPICkit2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\FormTestMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\ImportExportHex.cs" />
+    <Compile Include="PICkit2V2\PIC24F_PE.cs" />
+    <Compile Include="PICkit2V2\PIC32MXFunctions.cs" />
+    <Compile Include="PICkit2V2\PICkitFunctions.cs" />
+    <Compile Include="PICkit2V2\Pk2BootLoader.cs" />
+    <Compile Include="PICkit2V2\Program.cs" />
+    <Compile Include="PICkit2V2\SetOSCCAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PICkit2V2\USB.cs" />
+    <Compile Include="PICkit2V2\Utilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PICkit2V2\DialogAbout.resx" />
+    <EmbeddedResource Include="PICkit2V2\DialogCalibrate.resx" />
+    <EmbeddedResource Include="PICkit2V2\DialogLogic.resx" />
+    <EmbeddedResource Include="PICkit2V2\DialogPK2Go.resx" />
+    <EmbeddedResource Include="PICkit2V2\dialogSounds.resx" />
+    <EmbeddedResource Include="PICkit2V2\DialogTroubleshoot.resx" />
+    <EmbeddedResource Include="PICkit2V2\DialogUART.resx" />
+    <EmbeddedResource Include="PICkit2V2\FormMultiWinEEData.resx" />
+    <EmbeddedResource Include="PICkit2V2\FormMultiWinProgMem.resx" />
+    <EmbeddedResource Include="PICkit2V2\FormPICkit2.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
