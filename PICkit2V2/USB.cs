@@ -188,7 +188,7 @@ namespace PICkit2V2
 			HidD_GetHidGuid(ref HidGuid);
 			zero = SetupDiGetClassDevs(ref HidGuid, null, 0, 18);
 			DeviceInterfaceData.cbSize = Marshal.SizeOf(DeviceInterfaceData);
-			for (int i = 0; i < 20; i++)
+			for (int i = 0; i < 50; i++)
 			{
 				if (SetupDiEnumDeviceInterfaces(zero, 0, ref HidGuid, i, ref DeviceInterfaceData) == 0)
 				{
